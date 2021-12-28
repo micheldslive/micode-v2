@@ -1,0 +1,156 @@
+.header {
+  z-index: 9998;
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  position: fixed;
+  padding: 1em;
+  left: 50%;
+  transform: translate3d(-50%, 0, 10px);
+  background-color: var(--color-background);
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    svg.logo {
+      width: 150px;
+      margin-left: 1.4em;
+    }
+
+    ul {
+      display: flex;
+      gap: 15px;
+    }
+  }
+
+  ul svg {
+    fill: var(--color-main-title);
+    transition: 0.2s linear;
+  }
+
+  li:nth-child(1):hover {
+    svg {
+      fill: var(--color-github);
+    }
+  }
+
+  li:nth-child(2):hover {
+    svg {
+      fill: var(--color-linkedin);
+    }
+  }
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 1.4em;
+
+  svg {
+    width: 22px;
+  }
+
+  a {
+    z-index: 44;
+    cursor: pointer;
+  }
+
+  a:first-child {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.2em;
+    height: 1.2em;
+  }
+}
+
+.icomn {
+  position: absolute;
+  display: block;
+  width: 24px;
+  height: 3px;
+  border-radius: 12px;
+  background: var(--color-main-title);
+  margin-bottom: 0.46em;
+  transition: all 0.2s linear;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 3px;
+    top: 8px;
+    right: 0;
+    background: var(--color-main-title);
+    border-radius: 12px;
+    transition: all 0.2s linear;
+  }
+}
+
+.icomn.active {
+  transform: rotateZ(45deg);
+  margin-bottom: 0;
+
+  &::before {
+    content: "";
+    top: 0;
+    width: 24px;
+    transform: rotateZ(-90deg);
+  }
+}
+
+.dropmn {
+  position: absolute;
+  width: 22em;
+  height: 22em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 50%;
+  clip-path: circle(0);
+  background: var(--color-secundary-bg);
+  visibility: hidden;
+  pointer-events: none;
+  overflow: hidden;
+  will-change: auto;
+  transition: all 0.2s linear;
+  z-index: -5;
+
+  ul {
+    margin-top: 8em;
+    margin-left: 3em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  li {
+    color: var(--color-main-title);
+    font-size: 1em;
+    padding: 0.4em;
+    margin: 0.4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8em;
+    font-weight: 500;
+  }
+}
+
+.dropmn.active {
+  visibility: visible;
+  pointer-events: all;
+  clip-path: circle(50%);
+}
+
+@media (max-width: 725px) {
+  .header {
+    padding: 1em 0;
+  }
+}

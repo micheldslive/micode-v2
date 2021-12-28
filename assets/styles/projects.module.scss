@@ -1,0 +1,259 @@
+.projects {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  height: 100vh;
+  max-width: 1400px;
+  padding: 0 4em;
+}
+
+.titlesection {
+  width: 300px;
+  margin-top: 22vh;
+
+  h1 {
+    font-family: var(--font-title);
+    color: var(--color-main-title);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  span {
+    color: var(--color-text);
+    display: flex;
+    gap: 1em;
+    font-size: 1.4em;
+
+    &::before {
+      content: "";
+      width: 24px;
+      height: 3px;
+      margin-top: 9px;
+      background: var(--color-main-title);
+      display: block;
+    }
+  }
+}
+
+.mural {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  overflow: auto;
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
+  padding: 4.5em 0 3em;
+  height: 100%;
+}
+
+.cardproject {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+
+  p {
+    position: absolute;
+    top: 0.6em;
+    color: var(--color-main-title);
+    padding-right: 0.6em;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s linear;
+  }
+
+  p.desc {
+    max-width: 270px;
+  }
+
+  @media (max-width: 500px) {
+    p.desc {
+      max-width: 150px;
+    }
+  }
+
+  @media (min-width: 501px) and (max-width: 1080px) {
+    p.desc {
+      max-width: 150px;
+    }
+  }
+
+  &:hover {
+    p {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  :is(span, h2) {
+    color: var(--color-main-title);
+    font-weight: 700;
+  }
+
+  h2 {
+    font-family: "Rubik";
+    font-weight: 500;
+    font-size: 3em;
+    line-height: 1;
+    color: var(--color-text);
+  }
+
+  div:first-child {
+    padding: 0.6em;
+    order: 1;
+  }
+
+  div {
+    width: 300px;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  picture {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.cardproject:nth-child(2n) {
+  div:nth-child(2n) {
+    order: 2;
+    border-left: 1px solid var(--color-border);
+  }
+}
+
+.cardproject:nth-child(2n + 1) {
+  div:nth-child(2n + 1) {
+    border-left: 1px solid var(--color-border);
+  }
+}
+
+@media (max-width: 980px) {
+  .projects {
+    padding: 2em;
+  }
+
+  .titlesection {
+    margin-top: 4em;
+
+    h1 {
+      font-size: 3em;
+    }
+  }
+
+  .mural {
+    width: 60%;
+  }
+
+  .cardproject {
+    width: 100%;
+
+    div {
+      width: 50%;
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .cardproject {
+    width: 100%;
+
+    div {
+      width: 50%;
+      height: 170px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .projects {
+    padding: 1.2em;
+    flex-direction: column;
+  }
+
+  .titlesection {
+    margin-top: 3em;
+
+    h1 {
+      font-size: 2em;
+    }
+  }
+
+  .mural {
+    width: 100%;
+    margin-top: 2em;
+  }
+
+  .cardproject {
+    width: 100%;
+
+    div {
+      width: 50%;
+      height: 150px;
+    }
+  }
+}
+
+@media (max-width: 415px) {
+  .cardproject {
+    p {
+      top: 0.2em;
+      font-size: 0.84em;
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .cardproject {
+    width: 100%;
+
+    div {
+      width: 50%;
+      height: 120px;
+    }
+
+    p {
+      font-size: 0.788em;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .cardproject {
+    p {
+      font-size: 0.7em;
+    }
+  }
+}
+
+@media (max-width: 280px) {
+  .cardproject {
+    width: 100%;
+
+    div {
+      width: 50%;
+      height: 100px;
+    }
+
+    p {
+      padding: 0;
+      font-size: 0.55em;
+    }
+  }
+}
