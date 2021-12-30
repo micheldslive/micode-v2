@@ -20,19 +20,6 @@
   }
 }
 
-.write {
-  animation: write 10s steps(43, start) infinite, cursor 0.5s step-end infinite;
-}
-@keyframes write {
-  0% {
-    width: 100%;
-  }
-  70%,
-  100% {
-    width: 0;
-  }
-}
-
 .me {
   position: relative;
   padding: 1em;

@@ -17,6 +17,7 @@
     color: var(--color-main-title);
     font-weight: 500;
     margin-bottom: 16px;
+    transition: 0.2s;
   }
 
   span {
@@ -32,6 +33,7 @@
       margin-top: 9px;
       background: var(--color-main-title);
       display: block;
+      transition: 0.2s;
     }
   }
 }
@@ -46,6 +48,7 @@
   border-right: 1px solid var(--color-border);
   padding: 4.5em 0 3em;
   height: 100%;
+  transition: 0.2s;
 }
 
 .cardproject {
@@ -62,7 +65,7 @@
     padding-right: 0.6em;
     visibility: hidden;
     opacity: 0;
-    transition: all 0.2s linear;
+    transition: all 0.2s;
   }
 
   p.desc {
@@ -91,6 +94,7 @@
   :is(span, h2) {
     color: var(--color-main-title);
     font-weight: 700;
+    transition: 0.2s;
   }
 
   h2 {

@@ -1,8 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
-import Header from 'components/header';
-import "assets/styles/global.css";
+import "assets/styles/fonts.css";
 
 const MyApp = function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -26,7 +25,6 @@ const MyApp = function MyApp({ Component, pageProps }: AppProps) {
         <meta name="keywords" content="Michel, michel, micheldslive, michelds, Michel Domingos" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <Header />
       <Component { ...pageProps } />
     </>
   );

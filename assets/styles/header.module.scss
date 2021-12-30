@@ -1,13 +1,17 @@
 .header {
-  z-index: 9998;
+  z-index: 999;
   width: 100%;
-  max-width: 1450px;
-  margin: 0 auto;
   position: fixed;
   padding: 1em;
   left: 50%;
   transform: translate3d(-50%, 0, 10px);
   background-color: var(--color-background);
+  transition: 0.2s;
+
+  div.container {
+    max-width: 1450px;
+    margin: 0 auto;
+  }
 
   nav {
     display: flex;
@@ -16,12 +20,17 @@
 
     svg.logo {
       width: 150px;
-      margin-left: 1.4em;
+      margin-left: 1.2em;
+    }
+
+    path.name {
+      fill: var(--color-main-title);
+      transition: 0.2s;
     }
 
     ul {
       display: flex;
-      gap: 15px;
+      gap: 10px;
     }
   }
 
@@ -48,24 +57,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 1.4em;
-
-  svg {
-    width: 22px;
-  }
+  padding-right: 1.2em;
+  gap: 10px;
 
   a {
-    z-index: 44;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    width: 24px;
   }
 
-  a:first-child {
+  a:last-child {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 1.2em;
     height: 1.2em;
+  }
+}
+
+.theme {
+  display: flex;
+  justify-content: center;
+  svg path {
+    fill: var(--color-main-title);
+    transition: 0.2s;
   }
 }
 
@@ -123,7 +141,7 @@
 
   ul {
     margin-top: 8em;
-    margin-left: 3em;
+    margin-left: 5em;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -152,5 +170,10 @@
 @media (max-width: 725px) {
   .header {
     padding: 1em 0;
+
+    nav svg.logo {
+      width: 120px;
+      transition: 0.2s;
+    }
   }
 }

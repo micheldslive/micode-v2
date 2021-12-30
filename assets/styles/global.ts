@@ -1,17 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Rubik:wght@300;400;500;800&display=swap");
+import { createGlobalStyle } from "styled-components";
 
+interface Props {
+  theme: any;
+}
+
+export default createGlobalStyle<Props>`
 :root {
-  --color-background: #171717;
-  --color-secundary-bg: #30be00;
-  --color-main-title: #ededed;
-  --color-text: #b9b9b9;
-  --color-footer: #00c749;
+  --color-background: ${(props) => props.theme.background};
+  --color-secundary-bg: ${(props) => props.theme.secundaryBg};
+  --color-main-title: ${(props) => props.theme.mainTitle};
+  --color-text: ${(props) => props.theme.text};
+  --color-footer: ${(props) => props.theme.footer};
+  --color-border: ${(props) => props.theme.border};
+  --color-error: ${(props) => props.theme.error};
+  --color-github: ${(props) => props.theme.github};
+  --color-linkedin: ${(props) => props.theme.linkedin};
   --font-title: "Rubik";
-  --color-border: #333;
-  --color-error: #b62424;
-  --color-github: #7e57c2;
-  --color-linkedin: #0e66c2;
-  --color-twitter: #1d9bf0;
 }
 
 html,
@@ -381,3 +385,4 @@ h2 {
     transform: scale(0.96);
   }
 }
+`;
