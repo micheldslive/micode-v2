@@ -2,12 +2,12 @@ import React from 'react';
 import cx from 'classnames';
 import style from 'assets/styles/footer.module.scss';
 
-interface pageProps {
+interface PageProps {
   page: number;
-  setPage: any;
+  setPage: Function;
 }
 
-const Footer = function Footer({ page, setPage } : pageProps) {
+const Footer: React.FC<PageProps> = ({ page, setPage }) => {
     return (
       <>
         <footer className={ style.footer }>

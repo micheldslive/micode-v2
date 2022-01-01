@@ -10,7 +10,7 @@ type CardProps = {
   desc: string;
 };
 
-const Card = function Card({ number, name, url, link, desc }: CardProps) {
+const Card: React.FC<CardProps> = ({ number, name, url, link, desc }) => {
   return (
     <a href={ link } target="_blank" rel="" className={ style.cardproject }>
       <div>

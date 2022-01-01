@@ -12,7 +12,7 @@ import { themes } from "assets/styles/theme";
 import GlobalStyle from "assets/styles/global";
 
 
-const Home: NextPage = function Home() {
+const Home: NextPage = () => {
   const [page, setPage] = useState<any>(0);
   const [change, setChange] = useState<any>(0);
   const theme = themes[change];

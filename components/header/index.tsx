@@ -1,18 +1,15 @@
 import React, { useState, useRef } from 'react';
 import cx from 'classnames';
 import style from 'assets/styles/header.module.scss';
-import OutSideClick from 'hooks/OutSideClick';
+
 
 interface HeaderProps {
-  change: any;
-  setChange: any;
+  change: number;
+  setChange: Function;
 }
-const Header: React.FC<HeaderProps> = ({change, setChange}: HeaderProps) => {
+const Header: React.FC<HeaderProps> = ({ change, setChange }) => {
   const [menuStatus, setMenuStatus] = useState(false),
-    ref = useRef(null),
     theme = change ? 0 : 1;
-
-  OutSideClick(ref, () => setMenuStatus(false));
 
   const handleClickMenu = (event: { preventDefault: () => void; }) => {
     event.preventDefault();
@@ -91,7 +88,7 @@ const Header: React.FC<HeaderProps> = ({change, setChange}: HeaderProps) => {
                 </svg>
               )}
             </a>
-            <a href="#" onClick={ handleClickMenu } ref={ ref } aria-label="Menu">
+            <a href="#" onClick={ handleClickMenu } aria-label="Menu">
               <span className={ cx(style.icomn, { [style.active]: menuStatus, }) } />
             </a>
             <div className={ cx(style.dropmn, { [style.active]: menuStatus, }) }>

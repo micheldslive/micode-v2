@@ -1,12 +1,12 @@
 import React from 'react';
 import style from 'assets/styles/carousel.module.scss';
 
-type TCarouselProps = {
+type CarouselProps = {
   position: number;
   children: any;
 };
 
-const Carousel = function Carousel({ position, children }: TCarouselProps) {
+const Carousel: React.FC<CarouselProps> = ({ position, children }) => {
   return (
     <div className={ style.carousel }>
       <div className={ style.controller } style={ { transform: `translateX(${position}vw)` } }>

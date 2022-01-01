@@ -3,7 +3,7 @@ import Typed from 'react-typed';
 import Dev from 'components/devImage';
 import style from 'assets/styles/presentation.module.scss';
 
-const Presentation = function Presentation() {
+const Presentation: React.FC = () => {
   const positions = [
     "Front End Developer",
     "Back End Developer",
