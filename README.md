@@ -48,6 +48,7 @@ Esse projeto foi desenvolvido com a seguinte tecnologia e suas dependencias:
     - html-react-parser
     - sass
     - react-typed
+    - styled-components
 
 ## ▶️ Executando o projeto
 
