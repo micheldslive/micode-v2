@@ -25,7 +25,9 @@
 ---
 
 ## 💻 Projeto
-![Resultado do projeto](assets/demo/prev.gif)
+<p align="center">
+  <img src="https://github.com/micheldslive/micode-v2/blob/master/assets/demo/prev.gif">
+</p>
 
 <h4 align="center"><a href="https://mi-code.vercel.app/">Clique aqui para ver o projeto</a></h4>
 
