@@ -36,9 +36,9 @@
 ## 📌 Seções
 Site composto por 3 seções:
 
-- **Home:** Descrição falando um pouco sobre quem sou;
-- **Sobre:** Quem sou / minhas Skills em algumas Stacks com foco em Front-end;
-- **Projetos:** Alguns projetos desenvolvidos com link direto para o projeto em funcionamento;
+- **Home:** Página inicial de apresentação;
+- **Sobre:** Quem sou / Minhas hard skills;
+- **Projetos:** Alguns projetos desenvolvidos com link direto para o build;
 
 ---
 
