@@ -10,8 +10,8 @@ const Presentation: React.FC = () => {
     "Software Engineer",
   ];
   return (
-    <section className={ style.presentation }>
-      <div className={ style.me }>
+    <section className={style.presentation}>
+      <div className={style.me}>
         <p></p>
         <div>
           <span>Olá, sou o </span>

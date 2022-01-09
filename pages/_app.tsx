@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
+import { Provider } from 'react-redux';
+import { store } from 'reducer/store';
 import "assets/styles/fonts.css";
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
@@ -25,7 +27,9 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         <meta name="keywords" content="Michel, michel, micheldslive, michelds, Michel Domingos" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <Component { ...pageProps } />
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
     </>
   );
 };

@@ -10,29 +10,30 @@ import Footer from "components/footer";
 import { ThemeProvider } from "styled-components";
 import { themes } from "assets/styles/theme";
 import GlobalStyle from "assets/styles/global";
+import { connect } from "react-redux";
+import { mapStateToProps } from "reducer/maps";
+import { ReduxType } from "reducer/types";
 
-
-const Home: NextPage = () => {
-  const [page, setPage] = useState<any>(0);
-  const [change, setChange] = useState<any>(0);
-  const theme = themes[change];
+const Home: NextPage<ReduxType> = ({ states }) => {
+  const { change } = states;
+  const theme = themes[change ? 0 : 1];
 
   return (
     <>
-    <Header change={change} setChange={setChange} />
+      <Header />
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <main className={style.main}>
-          <Carousel position={-page}>
+          <Carousel>
             <Presentation />
             <About />
             <Projects />
           </Carousel>
         </main>
-        <Footer page={page} setPage={setPage} />
+        <Footer />
       </ThemeProvider>
     </>
   );
 };
 
-export default Home;
+export default connect(mapStateToProps)(Home);
