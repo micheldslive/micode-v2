@@ -25,7 +25,9 @@
 ---
 
 ## 💻 Projeto
-![Resultado do projeto](assets/demo/prev.gif)
+<p align="center">
+  <img src="https://github.com/micheldslive/micode-v2/blob/master/assets/demo/prev.gif">
+</p>
 
 <h4 align="center"><a href="https://mi-code.vercel.app/">Clique aqui para ver o projeto</a></h4>
 
@@ -34,9 +36,9 @@
 ## 📌 Seções
 Site composto por 3 seções:
 
-- **Home:** Descrição falando um pouco sobre quem sou;
-- **Sobre:** Quem sou / minhas Skills em algumas Stacks com foco em Front-end;
-- **Projetos:** Alguns projetos desenvolvidos com link direto para o projeto em funcionamento;
+- **Home:** Página inicial de apresentação;
+- **Sobre:** Quem sou / Minhas hard skills;
+- **Projetos:** Alguns projetos desenvolvidos com link direto para o build;
 
 ---
 
@@ -48,6 +50,7 @@ Esse projeto foi desenvolvido com a seguinte tecnologia e suas dependencias:
     - html-react-parser
     - sass
     - react-typed
+    - styled-components
 
 ## ▶️ Executando o projeto
 
