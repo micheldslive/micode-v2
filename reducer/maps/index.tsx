@@ -1,8 +1,8 @@
 import { bindActionCreators, Dispatch } from "redux";
+import { State } from "reducer/types";
 import * as action from "reducer/actions";
-import { States } from "reducer/types";
 
-export const mapStateToProps = (states: States) => ({ states });
+export const mapStateToProps = (state: State) => ({ state });
 
 export const mapDispatchToProps = (dispatch: Dispatch) =>
   bindActionCreators(action, dispatch);

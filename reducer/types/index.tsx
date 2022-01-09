@@ -1,6 +1,6 @@
 import { mapDispatchToProps, mapStateToProps } from "reducer/maps";
 
-export interface States {
+export interface State {
   page?: number;
   change?: boolean;
   menu?: boolean;
@@ -8,7 +8,7 @@ export interface States {
 
 export type Action = {
   type: string;
-  state: States;
+  state: State;
 };
 
 export type DispatchType = (args: Action) => Action;

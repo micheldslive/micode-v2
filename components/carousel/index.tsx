@@ -1,14 +1,14 @@
 import React from "react";
 import style from "assets/styles/carousel.module.scss";
 import { useSelector } from "react-redux";
-import { States } from "reducer/types";
+import { State } from "reducer/types";
 
 type CarouselProps = {
   children: any;
 };
 
 const Carousel: React.FC<CarouselProps> = ({ children }) => {
-  const position = useSelector((state): States => state);
+  const position = useSelector((state): State => state);
 
   return (
     <div className={style.carousel}>

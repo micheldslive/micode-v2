@@ -2,12 +2,12 @@ import {
   SET_PAGE,
   SET_CHANGE,
   SET_MENU,
-  States,
+  State,
   Action,
   DispatchType,
 } from "reducer/types";
 
-export function setPage(state: States) {
+export function setPage(state: State) {
   const action: Action = {
     type: SET_PAGE,
     state,
@@ -17,7 +17,7 @@ export function setPage(state: States) {
 }
 
 
-export function setChange(state: States) {
+export function setChange(state: State) {
   const action: Action = {
     type: SET_CHANGE,
     state,
@@ -26,7 +26,7 @@ export function setChange(state: States) {
   return simulateHttpRequest(action);
 }
 
-export function setMenu(state: States) {
+export function setMenu(state: State) {
   const action: Action = {
     type: SET_MENU,
     state,

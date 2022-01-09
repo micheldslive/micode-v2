@@ -14,8 +14,8 @@ import { connect } from "react-redux";
 import { mapStateToProps } from "reducer/maps";
 import { ReduxType } from "reducer/types";
 
-const Home: NextPage<ReduxType> = ({ states }) => {
-  const { change } = states;
+const Home: NextPage<ReduxType> = ({ state }) => {
+  const { change } = state;
   const theme = themes[change ? 0 : 1];
 
   return (

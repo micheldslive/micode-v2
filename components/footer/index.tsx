@@ -5,8 +5,8 @@ import { ReduxType } from "reducer/types";
 import cx from "classnames";
 import style from "assets/styles/footer.module.scss";
 
-const Footer: React.FC<ReduxType> = ({ states, setPage }) => {
-  const { page } = states;
+const Footer: React.FC<ReduxType> = ({ state, setPage }) => {
+  const { page } = state;
 
   return (
     <footer className={style.footer}>
