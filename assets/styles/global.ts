@@ -56,6 +56,19 @@ h2 {
   -webkit-text-size-adjust: 100%;
 }
 
+nav {
+    a.logo {
+      svg {
+        width: 150px;
+        margin-left: 1.2em;
+        path.mi-code_svg__name {
+          fill: var(--color-main-title);
+          transition: 0.2s;
+        }
+      }
+    }
+}
+
 ::-webkit-scrollbar {
   width: 4px;
   border-radius: 3px;
