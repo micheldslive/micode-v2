@@ -15,6 +15,11 @@ export default createGlobalStyle<Props>`
   --color-error: ${(props) => props.theme.error};
   --color-github: ${(props) => props.theme.github};
   --color-linkedin: ${(props) => props.theme.linkedin};
+
+  --color-legs: ${(props) => props.theme.legs};
+  --color-legs-in: ${(props) => props.theme.legsin};
+  --color-notebook: ${(props) => props.theme.notebook};
+  --color-milogo: ${(props) => props.theme.milogo};
   --font-title: "Rubik";
 }
 
@@ -68,6 +73,27 @@ nav {
       }
     }
 }
+
+
+/* ----------------- COLORS DEV --------------------- */
+
+#path228, #path220 {
+  fill: var(--color-legs);
+}
+
+#path186 {
+  fill: var(--color-legs-in);
+}
+
+#path206 {
+  fill: var(--color-notebook);
+}
+
+#path215 {
+  fill: var(--color-milogo);
+}
+/* ------------------------------------------------- */
+
 
 ::-webkit-scrollbar {
   width: 4px;

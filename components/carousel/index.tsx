@@ -1,20 +1,22 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import style from "assets/styles/carousel.module.scss";
-import { useSelector } from "react-redux";
+import { connect } from "react-redux";
 import { State } from "reducer/types";
+import { mapDispatchToProps, mapStateToProps } from "reducer/maps";
 
 type CarouselProps = {
-  children: any;
+  children: ReactNode;
+  state: State;
 };
 
-const Carousel: React.FC<CarouselProps> = ({ children }) => {
-  const position = useSelector((state): State => state);
-
+const Carousel: React.FC<CarouselProps> = ({ children, state }) => {
+  const { page } = state;
+  
   return (
     <div className={style.carousel}>
-      <div className={style.controller} style={{ transform: `translateX(-${position.page}vw)` }} >
+      <div className={style.controller} style={{ transform: `translateX(-${page}vw)` }} >
         {Array.isArray(children) ? (
-          children.map((element: any) => (
+          children.map((element) => (
             <div className={style.panel} key={element.type.name}>
               {element}
             </div>
@@ -27,4 +29,4 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
   );
 };
 
-export default Carousel;
+export default connect(mapStateToProps, mapDispatchToProps)(Carousel);

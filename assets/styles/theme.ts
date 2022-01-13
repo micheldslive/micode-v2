@@ -10,6 +10,11 @@ export const themes = [
     error: "#b62424",
     github: "#7e57c2",
     linkedin: "#0e66c2",
+
+    legs: "#000",
+    legsin: "#212121",
+    notebook: "#292A2D",
+    milogo: "#eee"
   },
   {
     id: "light",
@@ -22,5 +27,10 @@ export const themes = [
     error: "#b62424",
     github: "#7e57c2",
     linkedin: "#0e66c2",
+
+    legs: "#ccc",
+    legsin: "#aaa",
+    notebook: "#c2c2c2",
+    milogo: "#111"
   },
 ];
