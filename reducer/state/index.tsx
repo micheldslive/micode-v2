@@ -2,7 +2,7 @@ import { SET_PAGE, SET_CHANGE, SET_MENU, Action, State } from "reducer/types";
 
 export const initialState = {
   page: 0,
-  change: true,
+  change: 0,
   menu: false,
 };
 

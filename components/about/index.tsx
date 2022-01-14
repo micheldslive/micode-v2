@@ -3,7 +3,7 @@ import Parser from "html-react-parser";
 import { skills } from "services/skills";
 import style from "assets/styles/about.module.scss";
 
-const About: React.FC = () => {
+const About = () => {
   return (
     <section className={style.about}>
       <h1>Sobre</h1>

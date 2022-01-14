@@ -3,7 +3,7 @@ import Card from './card';
 import style from 'assets/styles/projects.module.scss';
 import { projects } from 'services/projects';
 
-const Projects: React.FC = () => {
+const Projects = () => {
   return (
     <section className={ style.projects }>
       <div className={ style.titlesection }>

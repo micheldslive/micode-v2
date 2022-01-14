@@ -2,7 +2,7 @@ import { mapDispatchToProps, mapStateToProps } from "reducer/maps";
 
 export interface State {
   page?: number;
-  change?: boolean;
+  change?: number;
   menu?: boolean;
 }
 

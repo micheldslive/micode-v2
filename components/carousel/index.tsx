@@ -9,7 +9,7 @@ type CarouselProps = {
   state: State;
 };
 
-const Carousel: React.FC<CarouselProps> = ({ children, state }) => {
+const Carousel = ({ children, state }: CarouselProps) => {
   const { page } = state;
   
   return (

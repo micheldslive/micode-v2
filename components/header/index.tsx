@@ -10,9 +10,8 @@ import Moon from "assets/images/moon.svg";
 import cx from "classnames";
 import style from "assets/styles/header.module.scss";
 
-const Header: React.FC<ReduxType> = ({ state, setChange, setMenu }) => {
+const Header = ({ state, setChange, setMenu }: ReduxType) => {
   const { change, menu } = state,
-  
     handleClickMenu = (event: { preventDefault: () => void }) => {
       event.preventDefault();
       setMenu({ menu: !menu });
@@ -41,12 +40,12 @@ const Header: React.FC<ReduxType> = ({ state, setChange, setMenu }) => {
             <a
               className={style.theme}
               href="#"
-              onClick={() => setChange({ change: !change })}
+              onClick={() => setChange({ change: Number(!change) })}
             >
               {change ? (
-                <Sun />
-              ) : (
                 <Moon />
+              ) : (
+                <Sun />
               )}
             </a>
             <a href="#" onClick={handleClickMenu} aria-label="Menu">

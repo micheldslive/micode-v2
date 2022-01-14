@@ -3,11 +3,11 @@ import Typed from 'react-typed';
 import Dev from 'components/devImage';
 import style from 'assets/styles/presentation.module.scss';
 
-const Presentation: React.FC = () => {
+const Presentation = () => {
   const positions = [
     "Front End Developer",
     "Back End Developer",
-    "Software Engineer",
+    "Software Developer",
   ];
   return (
     <section className={style.presentation}>

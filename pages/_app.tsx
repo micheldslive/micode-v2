@@ -6,7 +6,7 @@ import { persistor, store } from 'reducer/store';
 import "assets/styles/fonts.css";
 import { PersistGate } from 'redux-persist/integration/react';
 
-const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>

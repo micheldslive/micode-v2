@@ -5,12 +5,12 @@ import style from 'assets/styles/projects.module.scss';
 type CardProps = {
   number: number | string;
   name: string;
-  url: any;
+  url: StaticImageData;
   link: string;
   desc: string;
 };
 
-const Card: React.FC<CardProps> = ({ number, name, url, link, desc }) => {
+const Card = ({ number, name, url, link, desc }: CardProps) => {
   return (
     <a href={ link } target="_blank" rel="" className={ style.cardproject }>
       <div>

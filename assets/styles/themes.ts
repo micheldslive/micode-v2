@@ -14,7 +14,7 @@ export const themes = [
     legs: "#000",
     legsin: "#212121",
     notebook: "#292A2D",
-    milogo: "#eee"
+    milogo: "#eee",
   },
   {
     id: "light",
@@ -31,6 +31,6 @@ export const themes = [
     legs: "#ccc",
     legsin: "#aaa",
     notebook: "#c2c2c2",
-    milogo: "#111"
+    milogo: "#111",
   },
 ];

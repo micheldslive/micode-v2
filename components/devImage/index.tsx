@@ -1,6 +1,6 @@
 import React from "react";
 
-const Dev: React.FC = () => {
+const Dev = () => {
   return (
     <svg
       version="1.1"

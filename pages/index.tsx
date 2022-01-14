@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import type { NextPage } from "next";
+import React from "react";
 import style from "assets/styles/global.module.scss";
 import Carousel from "components/carousel";
 import Presentation from "components/presentation";
@@ -8,15 +7,15 @@ import Projects from "components/projects";
 import Header from "components/header";
 import Footer from "components/footer";
 import { ThemeProvider } from "styled-components";
-import { themes } from "assets/styles/theme";
+import { themes } from "assets/styles/themes";
 import GlobalStyle from "assets/styles/global";
 import { connect } from "react-redux";
 import { mapStateToProps } from "reducer/maps";
 import { ReduxType } from "reducer/types";
 
-const Home: NextPage<ReduxType> = ({ state }) => {
+const Home = ({ state }: ReduxType) => {
   const { change } = state;
-  const theme = themes[change ? 0 : 1];
+  const theme = themes[change as number];
 
   return (
     <>
