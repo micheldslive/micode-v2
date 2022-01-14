@@ -1,34 +1,18 @@
 import thunk from "redux-thunk";
-import { createStore, applyMiddleware, Store } from "redux";
-import { SET_PAGE, SET_CHANGE, SET_MENU, Action, DispatchType, State } from "reducer/types";
+import { createStore, applyMiddleware, Store, compose } from "redux";
+import { Action, DispatchType, State } from "reducer/types";
+import { reducer } from "reducer/state";
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
 
-const initialState = {
-  page: 0,
-  change: true,
-  menu: false,
+const persistConfig = {
+  key: "micode",
+  storage,
 };
 
-const reducer = (state: State = initialState, action: Action) => {
-  switch (action.type) {
-    case SET_PAGE:
-      return {
-        ...state,
-        page: action.state.page,
-      };
+const persistedReducer = persistReducer(persistConfig, reducer);
 
-      case SET_CHANGE:
-        return {
-          ...state,
-          change: action.state.change,
-        };
+export const store: Store<State, Action> & { dispatch: DispatchType } =
+  createStore(persistedReducer, applyMiddleware(thunk));
 
-        case SET_MENU:
-          return {
-            ...state,
-            menu: action.state.menu,
-          };
-  }
-  return state;
-};
-
-export const store: Store<State, Action> & { dispatch: DispatchType; } = createStore(reducer, applyMiddleware(thunk));
+export const persistor = persistStore(store);

@@ -2,8 +2,9 @@ import React from 'react';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
-import { store } from 'reducer/store';
+import { persistor, store } from 'reducer/store';
 import "assets/styles/fonts.css";
+import { PersistGate } from 'redux-persist/integration/react';
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -28,7 +29,9 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
         <link rel="icon" href="/favicon.svg" />
       </Head>
       <Provider store={store}>
-        <Component {...pageProps} />
+        <PersistGate loading={null} persistor={persistor}>
+          <Component {...pageProps} />
+        </PersistGate>
       </Provider>
     </>
   );
