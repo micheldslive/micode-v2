@@ -1,5 +1,5 @@
 import thunk from "redux-thunk";
-import { createStore, applyMiddleware, Store, compose } from "redux";
+import { createStore, applyMiddleware, Store } from "redux";
 import { Action, DispatchType, State } from "reducer/types";
 import { reducer } from "reducer/state";
 import { persistStore, persistReducer } from "redux-persist";
