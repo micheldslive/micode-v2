@@ -62,6 +62,6 @@ export const projects = [
     name: "Icone Digital",
     url: Icone,
     text: "Api do teste prático para feira da Gama Academy.",
-    href: "https:api-icone.herokuapp.com/",
+    href: "https://api-icone.herokuapp.com/",
   },
 ];
