@@ -1,17 +1,17 @@
 import React from "react";
-import style from "assets/styles/global.module.scss";
-import Carousel from "components/carousel";
-import Presentation from "components/presentation";
-import About from "components/about";
-import Projects from "components/projects";
-import Header from "components/header";
-import Footer from "components/footer";
+import style from "src/assets/styles/global.module.scss";
+import Carousel from "src/components/carousel";
+import Presentation from "src/components/presentation";
+import About from "src/components/about";
+import Projects from "src/components/projects";
+import Header from "src/components/header";
+import Footer from "src/components/footer";
 import { ThemeProvider } from "styled-components";
-import { themes } from "assets/styles/themes";
-import GlobalStyle from "assets/styles/global";
+import { themes } from "src/assets/styles/themes";
+import GlobalStyle from "src/assets/styles/global";
 import { connect } from "react-redux";
-import { mapStateToProps } from "reducer/maps";
-import { ReduxType } from "reducer/types";
+import { mapStateToProps } from "src/reducer/maps";
+import { ReduxType } from "src/reducer/types";
 
 const Home = ({ state }: ReduxType) => {
   const { change } = state;
