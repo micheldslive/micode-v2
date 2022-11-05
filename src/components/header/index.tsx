@@ -64,7 +64,7 @@ function Header({ state, setChange, setMenu }: ReduxType) {
               <ul>
                 <li>
                   <a
-                    href='/raw/master/src/download/Michel-Domingos.pdf'
+                    href='https://github.com/micheldslive/micode-v2/raw/master/src/download/Michel-Domingos.pdf'
                     download
                   >
                     Download CV
