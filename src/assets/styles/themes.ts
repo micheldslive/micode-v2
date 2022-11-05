@@ -33,4 +33,4 @@ export const themes = [
     notebook: "#c2c2c2",
     milogo: "#111",
   },
-];
+]

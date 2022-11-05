@@ -1,12 +1,10 @@
-import React from "react";
-import Parser from "html-react-parser";
-import { skills } from "src/services/skills";
-import style from "src/assets/styles/about.module.scss";
-import HTML from "src/assets/skills/html.svg";
+import React from 'react'
+import { skills } from '@/services/skills'
+import style from '@/assets/styles/about.module.scss'
+import HTML from '@/assets/skills/html.svg'
 
-const About = () => {
-
-  console.log(HTML);
+function About() {
+  console.log(HTML)
 
   return (
     <section className={style.about}>
@@ -34,7 +32,7 @@ const About = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default About;
+export default About

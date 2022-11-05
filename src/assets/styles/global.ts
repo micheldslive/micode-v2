@@ -62,7 +62,7 @@ h2 {
 }
 
 nav {
-    a.logo {
+    span.logo {
       svg {
         width: 150px;
         margin-left: 1.2em;
