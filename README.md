@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/micheldslive/micode-v2/blob/master/demo/micode.png" width="30%">
+  <img src="./.github/micode.png" width="30%">
 </p>
 
 <h1 align="center">
@@ -26,7 +26,7 @@
 
 ## 💻 Projeto
 <p align="center">
-  <img src="https://github.com/micheldslive/micode-v2/blob/master/demo/prev.gif">
+  <img src="./.github/prev.gif">
 </p>
 
 <h4 align="center"><a href="https://mi-code.vercel.app/">Clique aqui para ver o projeto.</a></h4>
