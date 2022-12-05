@@ -1,3 +1,4 @@
+import Books from '@/assets/projects/books.jpg'
 import Pomodoro from '@/assets/projects/pomodoro.jpg'
 import Movies from '@/assets/projects/movies.jpg'
 import Weather from '@/assets/projects/weather.jpg'
@@ -15,6 +16,13 @@ import Venom from '@/assets/projects/venom.jpg'
 import Icone from '@/assets/projects/icone-api.jpg'
 
 export const projects = [
+  {
+    id: 0,
+    name: 'Books Challenge',
+    url: Books,
+    text: 'Projeto realizado para teste de Front-End.',
+    href: 'https://books-challenge-micode.vercel.app/',
+  },
   {
     id: 1,
     name: 'Pomodoro APP',
